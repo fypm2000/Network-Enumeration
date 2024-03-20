@@ -14,9 +14,8 @@ The objective of this project was to perform a comprehensive network security as
 
 ### Tools Used
 
-- Nmap
-- ZenMap
-- Sparta
+- Nmap, a versatile network scanning tool for discovering hosts, open ports, and services on a network
+- Sparta, a Python-based GUI application for simplifying network penetration testing, offering streamlined access to various tools and scan results organization.
 
 ## Steps
 drag & drop screenshots here or use imgur and reference them using imgsrc
