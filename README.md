@@ -18,7 +18,7 @@ The objective of this project was to perform a comprehensive network security as
 - Sparta, a Python-based GUI application for simplifying network penetration testing, offering streamlined access to various tools and scan results organization.
 
 ## Steps
-drag & drop screenshots here or use imgur and reference them using imgsrc
+
 
 Every screenshot should have some text explaining what the screenshot is about.
 
