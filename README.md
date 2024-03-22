@@ -20,3 +20,5 @@ The objective of this project was to perform a comprehensive network security as
 ## Steps
 Every screenshot should have some text explaining what the screenshot is about.
 
+![Screenshot (52)](https://github.com/fypm2000/Network-Enumeration/assets/117059426/c3b8bd44-47e0-4eb8-bb69-cd4a4e02e18e)
+Sparta Initial Scan Results: This screenshot shows the initial findings of open services across the network, including HTTP, Microsoft Terminal Services, and specialized services like pcAnywhere (pcduo) and CodeMeter. It demonstrates the range of initial targets identified for further exploration and potential vulnerabilities.
