@@ -23,13 +23,27 @@ Sparta Scan Results
 ![Screenshot (52)](https://github.com/fypm2000/Network-Enumeration/assets/117059426/97e1be17-b87a-4ed8-a981-d564345906e3)
 Displays the initial network scan identifying open ports and running services, setting the stage for deeper vulnerability assessment. Notably, services like Microsoft Terminal Services on port 3389, which may be vulnerable to unauthorized remote access if not properly secured.
 
-![Screenshot (77)](https://github.com/fypm2000/Network-Enumeration/assets/117059426/e53648e8-41bf-47bc-bb84-3ebbcee6e8cf)
-Highlights missing HTTP security headers, indicating susceptibility to XSS and clickjacking, crucial for understanding web service security.
+![Screenshot (76)](https://github.com/fypm2000/Network-Enumeration/assets/117059426/0783dcb7-bd16-40c2-a831-4299e69e0dab)
+- Missing X-Frame-Options header: Without this header, the website could be vulnerable to clickjacking attacks, where an attacker could trick a user into clicking on something different than what the user perceives, potentially revealing confidential information or taking control of their account.
+  
+- Missing X-XSS-Protection header: This header enables the cross-site scripting (XSS) filter built into most browsers. Not having it means that the website is more susceptible to XSS attacks, where attackers could inject client-side scripts into web pages viewed by other users, potentially leading to data theft or malicious redirection.
 
+- Missing X-Content-Type-Options header: This prevents the browser from interpreting files as a different MIME type than what is specified by the content-type in the HTTP headers. Without this, attackers could perform MIME-type sniffing attacks, leading to security loopholes where content is executed with incorrect MIME types, such as executing non-executable files.
+
+
+![Screenshot (77)](https://github.com/fypm2000/Network-Enumeration/assets/117059426/e53648e8-41bf-47bc-bb84-3ebbcee6e8cf)
+
+- HASP LM 11.5.00: This is likely a license management server used for software protection. If vulnerabilities exist in this service, they could be exploited to bypass software licensing checks or disrupt license management on the network, affecting business operations and potentially enabling software piracy.
+  
+- The same missing security headers as above, missing HTTP security headers, indicating susceptibility to XSS and clickjacking, crucial for understanding web service security. Indication a systemic issue with security configurations across the network.
+
+
+192.168.101.153 (Port 1947/tcp)
+![Screenshot (78)](https://github.com/fypm2000/Network-Enumeration/assets/117059426/30259ef2-0b3d-4c9c-8f5d-55e5eb042f18)
+- Potential web application vulnerabilities: XSS vulnerability in iLoMai.aspx, allows the potential for cross-site scripting attacks, threatening user data and browser security.
 
 ![Screenshot (79)](https://github.com/fypm2000/Network-Enumeration/assets/117059426/84e21832-76d6-4337-b379-13f60b13e22c)
-Shows detailed findings from a web server scan, revealing LDAP management interfaces and default page configurations that could lead to information disclosure or unauthorized modifications.
-
+- Exposed LDAP service: Shows detailed findings from a web server scan, revealing LDAP management interfaces and default page configurations that could lead to information disclosure or unauthorized modifications.
 
 ![Screenshot (80)](https://github.com/fypm2000/Network-Enumeration/assets/117059426/34eab6d5-b90a-4504-84b5-7a2e0c02831f)
-Summarizes key vulnerabilities such as exposed administrative interfaces on SharePoint, outdated service versions, and server configurations that might be exploited by attackers.
+- Summarizes key vulnerabilities such as exposed administrative interfaces on SharePoint, outdated service versions, and server configurations that might be exploited by attackers.
