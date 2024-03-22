@@ -21,7 +21,7 @@ The objective of this project was to perform a comprehensive network security as
 Sparta Scan Results
 
 ![Screenshot (52)](https://github.com/fypm2000/Network-Enumeration/assets/117059426/97e1be17-b87a-4ed8-a981-d564345906e3)
-Displays the initial network scan identifying open ports and running services, setting the stage for deeper vulnerability assessment. Notably, services like Microsoft Terminal Services on port 3389, which may be vulnerable to unauthorized remote access if not properly secured.
+- Displays the initial network scan identifying open ports and running services, setting the stage for deeper vulnerability assessment. Notably, services like Microsoft Terminal Services on port 3389, which may be vulnerable to unauthorized remote access if not properly secured.
 
 ![Screenshot (76)](https://github.com/fypm2000/Network-Enumeration/assets/117059426/0783dcb7-bd16-40c2-a831-4299e69e0dab)
 - Missing X-Frame-Options header: Without this header, the website could be vulnerable to clickjacking attacks, where an attacker could trick a user into clicking on something different than what the user perceives, potentially revealing confidential information or taking control of their account.
@@ -47,3 +47,17 @@ Displays the initial network scan identifying open ports and running services, s
 
 ![Screenshot (80)](https://github.com/fypm2000/Network-Enumeration/assets/117059426/34eab6d5-b90a-4504-84b5-7a2e0c02831f)
 - Summarizes key vulnerabilities such as exposed administrative interfaces on SharePoint, outdated service versions, and server configurations that might be exploited by attackers.
+
+192.168.101.153 (Port 5357/tcp)
+![Screenshot (81)](https://github.com/fypm2000/Network-Enumeration/assets/117059426/ef97d5c7-20ed-4ad2-b0cb-4da206db73b3)
+
+
+- Microsoft HTTPAPI/2.0: Indicates a web service that, if not properly secured, could be targeted by attackers.
+- 
+- Lack of security headers, similar to other IP addresses, it poses risks such as clickjacking and XSS attacks.
+
+
+192.168.101.157 (Port 1947/tcp)
+![Screenshot (82)](https://github.com/fypm2000/Network-Enumeration/assets/117059426/576f6c51-40cb-4ed4-85cc-66cc8fa727c6)
+
+- HASP LM/15.00: Indicates an updated version of the license management service that, if exploitable, could lead to similar risks as mentioned for 192.168.101.151.
