@@ -23,6 +23,7 @@ Sparta Scan Results
 ![Screenshot (52)](https://github.com/fypm2000/Network-Enumeration/assets/117059426/97e1be17-b87a-4ed8-a981-d564345906e3)
 - Displays the initial network scan identifying open ports and running services, setting the stage for deeper vulnerability assessment. Notably, services like Microsoft Terminal Services on port 3389, which may be vulnerable to unauthorized remote access if not properly secured.
 
+192.168.101.197 (Port 80/tcp)
 ![Screenshot (76)](https://github.com/fypm2000/Network-Enumeration/assets/117059426/0783dcb7-bd16-40c2-a831-4299e69e0dab)
 - Missing X-Frame-Options header: Without this header, the website could be vulnerable to clickjacking attacks, where an attacker could trick a user into clicking on something different than what the user perceives, potentially revealing confidential information or taking control of their account.
   
@@ -31,6 +32,7 @@ Sparta Scan Results
 - Missing X-Content-Type-Options header: This prevents the browser from interpreting files as a different MIME type than what is specified by the content-type in the HTTP headers. Without this, attackers could perform MIME-type sniffing attacks, leading to security loopholes where content is executed with incorrect MIME types, such as executing non-executable files.
 
 
+192.168.101.151 (Port 1947/tcp)
 ![Screenshot (77)](https://github.com/fypm2000/Network-Enumeration/assets/117059426/e53648e8-41bf-47bc-bb84-3ebbcee6e8cf)
 
 - HASP LM 11.5.00: This is likely a license management server used for software protection. If vulnerabilities exist in this service, they could be exploited to bypass software licensing checks or disrupt license management on the network, affecting business operations and potentially enabling software piracy.
@@ -51,9 +53,8 @@ Sparta Scan Results
 192.168.101.153 (Port 5357/tcp)
 ![Screenshot (81)](https://github.com/fypm2000/Network-Enumeration/assets/117059426/ef97d5c7-20ed-4ad2-b0cb-4da206db73b3)
 
-
 - Microsoft HTTPAPI/2.0: Indicates a web service that, if not properly secured, could be targeted by attackers.
-- 
+  
 - Lack of security headers, similar to other IP addresses, it poses risks such as clickjacking and XSS attacks.
 
 
