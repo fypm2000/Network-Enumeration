@@ -27,9 +27,10 @@ Here's a summary of the findings from each scanned IP address, with an explanati
 192.168.101.151:
 ![Screenshot (46)](https://github.com/fypm2000/Network-Enumeration/assets/117059426/722e061e-6a03-44f2-9e12-4ab6043d9ec3)
 
-- The host is running Microsoft Terminal Services on port 3389. This could be a potential vulnerability because if the service is not configured securely, it could be susceptible to unauthorized remote access attempts.
+- The host is running Microsoft Terminal Services on port 3389, which could be vulnerable to attacks like BlueKeep if not patched or if weak credentials are used.
+- Detected as a possible Microsoft Windows XP or an embedded device. Windows XP is no longer supported, which means it's vulnerable to many known exploits.
 
-192.168.101.153:
+192.168.101.155:
 ![Screenshot (47)](https://github.com/fypm2000/Network-Enumeration/assets/117059426/3d4fbefc-2290-4549-8847-887b8f3a5e0a)
 
 - Similar to the previous IP, this host is also running Microsoft Terminal Services. Additionally, an HTTP service is running on port 5357, associated with network device discovery, which can leak information about the device.
@@ -45,7 +46,7 @@ Here's a summary of the findings from each scanned IP address, with an explanati
 
 ![Screenshot (50)](https://github.com/fypm2000/Network-Enumeration/assets/117059426/eeb5743b-2ff5-4461-a4ee-c79136b554bb)
 - 192.168.101.167: No specific OS details, but it is likely a Windows machine based on the services running.
-- 192.168.101.168: Shows open ports with services like Kerberos, indicating it might be a part of an Active Directory environment.
+- 192.168.101.168: Shows open ports with services like Kerberos, indicating it might be a part of an Active Directory environment. Misconfigurations here could lead to vulnerabilities such as Golden Ticket or Pass-the-Ticket attacks within Active Directory environments.
 - 192.168.101.192: This host is running CUPS (Common Unix Printing System) on port 631 and a VNC service on port 5900, which suggests remote desktop capabilities. If not secured, these can be entry points for an attacker.
 
 192.168.101.197:
