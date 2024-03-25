@@ -18,7 +18,43 @@ The objective of this project was to perform a comprehensive network security as
 - Sparta, a Python-based GUI application for simplifying network penetration testing, offering streamlined access to various tools and scan results organization.
 
 ## Steps
-Sparta Scan Results
+### Nmap Scan Results 
+
+Here's a summary of the findings from each scanned IP address, with an explanation of potential vulnerabilities and crucial information. 
+
+- The command nmap -T4 -A -F 192.168.101.150-205 tells nmap to conduct a relatively quick and aggressive scan (due to the -T4 and -F options) of the most common ports on the IP addresses ranging from 192.168.101.150 to 192.168.101.205
+  
+192.168.101.151:
+![Screenshot (46)](https://github.com/fypm2000/Network-Enumeration/assets/117059426/722e061e-6a03-44f2-9e12-4ab6043d9ec3)
+
+- The host is running Microsoft Terminal Services on port 3389. This could be a potential vulnerability because if the service is not configured securely, it could be susceptible to unauthorized remote access attempts.
+
+192.168.101.153:
+![Screenshot (47)](https://github.com/fypm2000/Network-Enumeration/assets/117059426/3d4fbefc-2290-4549-8847-887b8f3a5e0a)
+
+- Similar to the previous IP, this host is also running Microsoft Terminal Services. Additionally, an HTTP service is running on port 5357, associated with network device discovery, which can leak information about the device.
+
+192.168.101.157: 
+![Screenshot (48)](https://github.com/fypm2000/Network-Enumeration/assets/117059426/f9364fa3-7c56-4392-971a-f7e8ffc4fa2c)
+
+- This host is again running Microsoft Terminal Services on port 3389. As with the other hosts, this poses a risk if not properly secured.
+
+192.168.101.158:
+![Screenshot (49)](https://github.com/fypm2000/Network-Enumeration/assets/117059426/c6c3323a-3f20-481c-a812-98b45922c722)
+- This host does not provide specific OS details, but it is running Microsoft Terminal Services and also shows an SSL certificate for a domain, indicating it might be a server of some sort.
+
+![Screenshot (50)](https://github.com/fypm2000/Network-Enumeration/assets/117059426/eeb5743b-2ff5-4461-a4ee-c79136b554bb)
+- 192.168.101.167: No specific OS details, but it is likely a Windows machine based on the services running.
+- 192.168.101.168: Shows open ports with services like Kerberos, indicating it might be a part of an Active Directory environment.
+- 192.168.101.192: This host is running CUPS (Common Unix Printing System) on port 631 and a VNC service on port 5900, which suggests remote desktop capabilities. If not secured, these can be entry points for an attacker.
+
+192.168.101.197:
+![Screenshot (51)](https://github.com/fypm2000/Network-Enumeration/assets/117059426/b1dee784-1091-4270-94ad-56bd98be75ec)
+- Here we see an AXIS 207W network camera, which suggests this IP address is assigned to a surveillance camera. The open RTSP and HTTP ports could be vectors for unauthorized access if not properly secured.
+
+- For each of these IPs, the open ports and services can present vulnerabilities if they are not updated with patches for known exploits, configured with strong authentication mechanisms, and protected by a firewall. The specific configurations and versions of the services are not visible, so it's essential to check these against known vulnerabilities using a database like CVE. Unnecessary services should be disabled to reduce the attack surface, and strong, unique passwords should be enforced where authentication is required. Regular updates and monitoring for unusual activities are also critical in maintaining network security.
+
+### Sparta Scan Results
 
 ![Screenshot (52)](https://github.com/fypm2000/Network-Enumeration/assets/117059426/97e1be17-b87a-4ed8-a981-d564345906e3)
 - Displays the initial network scan identifying open ports and running services, setting the stage for deeper vulnerability assessment. Notably, services like Microsoft Terminal Services on port 3389, which may be vulnerable to unauthorized remote access if not properly secured.
